@@ -12,10 +12,10 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 
 #Background
-background = pygame.image.load('Ultime_Volcano.png')
+background = pygame.image.load('img/Ultime_Volcano.png')
 
 #Background Sound
-mixer.music.load("background.wav")
+mixer.music.load("assets/background.wav")
 mixer.music.play(-1)
 
 #create screen
@@ -117,7 +117,7 @@ while game_running:
             #shoot bullets player 1
             if event.key == ord('/'):
                 print("player1 shoot bullet")
-                mixer.Sound("laser.wav").play()
+                mixer.Sound("assets/laser.wav").play()
                 if(bullet_dir_1):
                     bullet = missile(player1.playerX, player1.playerY,
                                      bullet_dir_1, "img/missile-right.png")
@@ -129,7 +129,7 @@ while game_running:
             #player 2 shoots bullet
             if event.key == ord('r'):
                 print("player2 shoot bullet")
-                mixer.Sound("laser.wav").play()
+                mixer.Sound("assets/laser.wav").play()
                 if (bullet_dir_2):
                     bullet = missile(player2.playerX, player2.playerY,
                                      bullet_dir_2, "img/missile-right.png")

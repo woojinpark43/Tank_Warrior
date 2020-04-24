@@ -15,7 +15,7 @@ class Player:
         self.playerX = xCord#user's X coordinate
         self.playerY = yCord#user's Y coordinate
         self.bullets = []#stores all the bullets
-        self.healthImg = pygame.image.load("img\heart.png")
+        self.healthImg = pygame.image.load("img/heart.png")
         self.max_hp = 7#max hp this user has
         self.playerUp = 0#indicate if player jumped
         self.playerJumpPos = yCord# Y position where player jumped
@@ -64,7 +64,7 @@ class Player:
             y_val = bullet_.get_bullet_y() - self.playerY
             if(abs(x_val) <= 2 and abs(y_val) <= 35):
                 self.max_hp -= 1
-                mixer.Sound("explosion.wav").play()
+                mixer.Sound("assets/explosion.wav").play()
                 other_player.get_bullets().remove(bullet_)
                 break
 
